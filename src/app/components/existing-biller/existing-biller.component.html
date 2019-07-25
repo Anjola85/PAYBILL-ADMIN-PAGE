@@ -4,16 +4,18 @@
             <div class="card-block">
                 <h4 class="card-title">Existing Billers Information</h4>
                 <div class="table-overflow">
-                    <table class="table">
+                    <table class="table" style="text-align: center;">
                         <thead class="thead-light">
                             <tr>
                                 <th scope="col">Biller</th>
+                                <th scope="col">Description</th>
                                 <th scope="col">Date Joined</th>
                             </tr>
                         </thead>
                         <tbody *ngFor="let biller of billers">
                             <tr>
                                 <td>{{biller.biller_name}}</td>
+                                <td style="width: 450px; text-align: left;">{{biller.description}}</td>
                                 <td>{{biller.createdAt | date:'M/d/yy, h:mm a'}}</td>
                             </tr>
                         </tbody>
